@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url("./images/stars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .solarSystem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sun img {
+    width: 160px;
+    animation: orbit 24000ms linear infinite;
+  }
+  
+  .earth {
+    width: 360px;
+    height: 360px;
+    border: 1px solid white;
+    border-radius: 100%;
+    position: absolute;
+    animation: orbit 36500ms linear infinite;
+  }
+  
+  .earth::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    background: url("./images/earth.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(100%);
+  }
+  
+  .moon {
+    width: 140px;
+    height: 140px;
+    border: 1px solid white;
+    border-radius: 100%;
+    position: absolute;
+    top: -40px;
+    left: 14px;
+    animation: orbit 2800ms linear infinite;
+  }
+  
+  .moon::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("./images/moon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(12px);
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
