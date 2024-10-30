@@ -46,10 +46,61 @@ console.log(times[randomNumber]);
 
 // Array
 
-
 console.log("Aristoteles".split("").reverse().join(""));
 console.log("ARAUJO".split("").reverse().join(""));
 
 function wordCount(text) {
 
 }
+
+const tvPrograms = ["As Garras da Patrulha", "Domingo Legal", "Fantástico"];
+
+// LIFO
+
+tvPrograms.pop();
+tvPrograms.pop();
+tvPrograms.push("Bom dia e Cia");
+tvPrograms.push("TV Globinho");
+tvPrograms.pop();
+
+// FIFO
+
+tvPrograms.unshift("TV Cultura");
+tvPrograms.unshift("Castelo Ratimbum");
+tvPrograms.shift();
+
+tvPrograms.splice(0, 1);
+tvPrograms.splice(4, 5, "TV Vaquejada");
+
+console.log(tvPrograms);
+
+// Date
+
+const dateNow = new Date();
+
+console.log(dateNow);
+
+console.log(dateNow.toLocaleString("pt-BR"));
+console.log(dateNow.toLocaleDateString("pt-BR"));
+console.log(dateNow.toLocaleTimeString("pt-BR"));
+
+console.log(
+     dateNow.toLocaleString( "pt-BR", {
+          weekday: "long",
+          day:  "numeric",
+          month: "numeric",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+          }
+     )
+);
+
+const birthday = new Date("2007-05-03 00:00:00");
+
+console.log(birthday);
+console.log((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
+
+console.log(dateNow.getFullYear());
+console.log(birthday.getFullYear());
+console.log(dateNow.getFullYear() - birthday.getFullYear());
